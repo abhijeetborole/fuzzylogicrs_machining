@@ -1,0 +1,118 @@
+[System]
+Name='MaPro'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=5
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='H'
+Range=[0 50]
+NumMFs=2
+MF1='Soft':'trapmf',[-12.2 -0.659 31 38]
+MF2='Hard':'trapmf',[31 38 50.6 66.6]
+
+[Input2]
+Name='V'
+Range=[0 100]
+NumMFs=3
+MF1='Slow':'trapmf',[-36 -4 28 57]
+MF2='Medium':'trimf',[28 57 89]
+MF3='Fast':'trapmf',[57 89 104 136]
+
+[Input3]
+Name='w'
+Range=[0 5]
+NumMFs=3
+MF1='Narrow':'trapmf',[-1.8 -0.2 2 3]
+MF2='Medium':'trimf',[2 3 4]
+MF3='Wide':'trapmf',[3 4 5.2 6.8]
+
+[Input4]
+Name='f'
+Range=[0 0.2]
+NumMFs=3
+MF1='Small':'trapmf',[-0.072 -0.008 0.07 0.12]
+MF2='Medium':'trimf',[0.07 0.12 0.17]
+MF3='Large':'trapmf',[0.12 0.17 0.208 0.272]
+
+[Output1]
+Name='E'
+Range=[0 500]
+NumMFs=10
+MF1='EEL':'trapmf',[-180 -20 100 140]
+MF2='EVL':'trimf',[100 130 160]
+MF3='VL':'trimf',[135 155 175]
+MF4='L':'trimf',[160 175 190]
+MF5='SL':'trimf',[175 200 225]
+MF6='SH':'trimf',[200 240 270]
+MF7='H':'trimf',[240 275 300]
+MF8='VH':'trimf',[270 310 350]
+MF9='EVH':'trimf',[310 355 400]
+MF10='EEH':'trapmf',[360 420 508.3 575]
+
+[Output2]
+Name='SCE'
+Range=[0 10]
+NumMFs=10
+MF1='EEL':'trapmf',[-3.6 -0.4 1 1.8]
+MF2='EVL':'trimf',[1 1.75 2.6]
+MF3='VL':'trimf',[1.8 2.4 3]
+MF4='L':'trimf',[2.4 3 3.6]
+MF5='SL':'trimf',[3 3.5 4]
+MF6='SH':'trimf',[3.5 4 4.5]
+MF7='H':'trimf',[4 4.5 4.8]
+MF8='VH':'trimf',[4.5 5 5.6]
+MF9='EVH':'trimf',[4.8 6.4 8]
+MF10='EEH':'trapmf',[6.4 8 11 19]
+
+[Output3]
+Name='MRR'
+Range=[0 1000]
+NumMFs=8
+MF1='EVL':'trapmf',[-354.2 -45.81 50 125]
+MF2='VL':'trimf',[75 125 175]
+MF3='L':'trimf',[125 200 275]
+MF4='SL':'trimf',[200 250 300]
+MF5='SH':'trimf',[250 300 375]
+MF6='H':'trimf',[300 400 500]
+MF7='VH':'trimf',[400 575 725]
+MF8='EVH':'trapmf',[525 950 1025 1225]
+
+[Output4]
+Name='VB'
+Range=[0 0.2]
+NumMFs=10
+MF1='EEL':'trapmf',[0 0 0.029 0.04055]
+MF2='EEH':'trapmf',[0.14 0.16175 0.2 0.2]
+MF3='EVL':'trimf',[0.029 0.04055 0.05]
+MF4='VL':'trimf',[0.04055 0.048 0.0535]
+MF5='L':'trimf',[0.048 0.0535 0.062]
+MF6='SL':'trimf',[0.0535 0.062 0.07]
+MF7='SH':'trimf',[0.062 0.073 0.084]
+MF8='H':'trimf',[0.0745 0.086 0.0975]
+MF9='VH':'trimf',[0.0875 0.10625 0.122]
+MF10='EVH':'trimf',[0.107 0.132 0.1535]
+
+[Output5]
+Name='VB3'
+Range=[0 0.2]
+NumMFs=10
+MF1='EEL':'trapmf',[0 0 0.05 0.065]
+MF2='EEH':'trapmf',[0.145 0.1655 0.2 0.2]
+MF3='EVL':'trimf',[0.05 0.065 0.0775]
+MF4='VL':'trimf',[0.065 0.0765 0.0845]
+MF5='L':'trimf',[0.074 0.082 0.0912]
+MF6='SL':'trimf',[0.0845 0.0912 0.095]
+MF7='SH':'trimf',[0.09135 0.098 0.104]
+MF8='H':'trimf',[0.098 0.109 0.1175]
+MF9='VH':'trimf',[0.11 0.1212 0.134]
+MF10='EVH':'trimf',[0.125 0.141 0.163]
+
+[Rules]
